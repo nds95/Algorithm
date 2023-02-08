@@ -12,7 +12,6 @@ function solution(t, p) {
       if (t[j] === undefined) continue;
       word += t[j];
       if (word.length === p.length && Number(word) <= Number(p)) {
-        console.log(word);
         answerList.push(word);
       }
     }
