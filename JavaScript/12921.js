@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12921
 
-const n = 10;
+const n = 5;
 
 function solution(n) {
   let answer = 1;
