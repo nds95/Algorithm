@@ -32,6 +32,7 @@ function solution(N, stages) {
   for (const value of answer) {
     answerArr.push(value.stage);
   }
+
   return answerArr;
 }
 
