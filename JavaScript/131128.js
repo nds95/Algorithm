@@ -1,7 +1,7 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/131128?language=java
 
-const X = "01731298230";
-const Y = "19288800";
+const X = "123123123123123123123123123123123123123123123";
+const Y = "123123123123123123123123123123123123123123123";
 
 const solution = (X, Y) => {
   let result = "";
@@ -39,13 +39,13 @@ const solution = (X, Y) => {
   }
   // result의 값이 없으면 -1을 return
   if (!result) return "-1";
+  if (Number(result) === 0) return "0";
   // result를 역으로 sort하면 가장 큰 숫자가 나옴
-  return Number(
-    result
-      .split("")
-      .sort((a, b) => b - a)
-      .join("")
-  ).toString();
+  return result
+    .split("")
+    .sort((a, b) => b - a)
+    .join("")
+    .toString();
 };
 
 console.log(solution(X, Y));
