@@ -13,7 +13,7 @@ const solution = (new_id) => {
   // 3. 마침표가 2번이상 연속된 부분을 하나로 치환
   regex = new RegExp(/\.{2,}/, "g");
   new_id = new_id.replace(regex, ".");
-  // 4. 마침표가 처음이나 끝에 위치하면 제거
+  // 4. 마침표가 처음이나 끝에 위치하면 제거!
   if (new_id.startsWith(".")) new_id = new_id.substr(1);
   if (new_id.endsWith(".")) new_id = new_id.substr(0, new_id.length - 1);
   // 5. 빈 문자열이라면 'a'를 대입
