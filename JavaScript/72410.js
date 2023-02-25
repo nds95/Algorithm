@@ -9,7 +9,6 @@ const solution = (new_id) => {
   // 2. 소문자, 숫자, 빼기, 언더바, 마침표 빼고 제거
   let regex = new RegExp(/[^a-z0-9\-\_\.]/, "g");
   new_id = new_id.replace(regex, ``);
-
   // 3. 마침표가 2번이상 연속된 부분을 하나로 치환
   regex = new RegExp(/\.{2,}/, "g");
   new_id = new_id.replace(regex, ".");
