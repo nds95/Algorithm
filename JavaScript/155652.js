@@ -1,7 +1,7 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/155652
 
 const s = "aukks";
-const skip = "wbqd";
+const skip = "dfhnpq";
 const index = 5;
 
 const solution = (s, skip, index) => {
@@ -17,14 +17,21 @@ const solution = (s, skip, index) => {
 
     // skip에 해당되어 몇 번 skip해야하는지 확인
     let skipCount = 0;
-    for (let i = 0, len = skip.length; i < len; i++) {
-      if (charCode < skip[i] && charCode + index >= skip[i]) skipCount++;
+    for (let i = 0; i < index; i++) {
+      charCode++;
+      if (charCode > 122) charcode -= 26;
+      while (skip.includes(charCode)) charCode++;
+      if (charCode > 122) charcode -= 26;
     }
-    // skipCount만큼 더 더하기
-    charCode = charCode + index + skipCount;
-    while (charCode > 122) {
-      charCode -= 26;
-    }
+    // for (let i = 0, len = skip.length; i < len; i++) {
+    //   // if (charCode < skip[i] && charCode + index >= skip[i]) skipCount++;
+    //   for (let j = 0; j < index; j++) {
+    //     console.log(charCode);
+    //     charCode++;
+    //     if (charCode === skip[i]) charCode++;
+    //     if (charCode > 122) charCode -= 26;
+    //   }
+    // }
 
     return String.fromCharCode(charCode);
   };
