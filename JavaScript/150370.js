@@ -29,7 +29,7 @@ const solution = (today, terms, privacies) => {
 
   for (let i = 0, len = privacies.length; i < len; i++) {
     const splitedValue = privacies[i].split(" ");
-    const signUpDate = splitedValue[0];
+    let signUpDate = splitedValue[0];
     let signUpType = splitedValue[1];
 
     let date = addMonths(new Date(signUpDate), Number(termsObj[signUpType]));
