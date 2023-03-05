@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12982
 const d = [1];
-const budget = 10;
+let budget = 10;
 
 function solution(d, budget) {
   const sortedArr = d.sort((a, b) => {
