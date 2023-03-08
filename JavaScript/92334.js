@@ -20,7 +20,7 @@ const solution = (id_list, report, k) => {
     user[id] = [];
   }
   for (let i = 0, len = report.length; i < len; i++) {
-    const splitedReport = report[i].split(" ");
+    let splitedReport = report[i].split(" ");
 
     // report한 대상이 user object에 존재하지 않으면 추가
     if (!user[splitedReport[0]].includes(splitedReport[1]))
