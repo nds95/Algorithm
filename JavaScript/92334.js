@@ -8,7 +8,7 @@ const report = [
   "muzi neo",
   "apeach muzi",
 ];
-const k = 2;
+let k = 2;
 
 const solution = (id_list, report, k) => {
   let answer = [];
