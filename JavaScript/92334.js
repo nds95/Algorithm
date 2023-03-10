@@ -1,7 +1,7 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/92334
 
 const id_list = ["muzi", "frodo", "apeach", "neo"];
-const report = [
+let report = [
   "muzi frodo",
   "apeach frodo",
   "frodo neo",
