@@ -19,16 +19,19 @@ const solution = (wallpaper) => {
   for (let i = 0, len = wallpaper.length; i < len; i++) {
     const X = wallpaper[i];
     const indexOfX = X.indexOf("#");
+    if (indexOfX === -1) continue;
     console.log(`indexOfx = ${indexOfX}`);
+    console.log(X.lastIndexOf("#"));
     // lux 값이 없을 때 '#'이 존재하면 i 입력(lux는 #가 있는 i의 최솟값)
     if (lux === undefined && indexOfX > -1) lux = i;
     // rdx의 값이 없거나 '#'이 있는 위치가 더 크다면 i 입력(rdx는 #가 있는 i 값의 최댓값)
-    if (rdx === undefined || indexOfX > rdx) rdx = i + 1;
+    if (rdx === undefined || indexOfX > -1) rdx = i + 1;
     if (luy === undefined || indexOfX < luy) luy = indexOfX;
-    if (rdy === undefined || indexOfX > rdy) rdy = indexOfX + 1;
+    if (rdy === undefined || X.lastIndexOf("#") + 1 > rdy)
+      rdy = X.lastIndexOf("#") + 1;
   }
 
-  return [lux, luy, rdx, rdy]; // [0, 1, 3, 4];
+  return [lux, luy, rdx, rdy]; // [1, 3, 5, 8];
 };
 
 console.log(solution(wallpaper));
