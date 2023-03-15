@@ -20,8 +20,6 @@ const solution = (wallpaper) => {
     const X = wallpaper[i];
     const indexOfX = X.indexOf("#");
     if (indexOfX === -1) continue;
-    console.log(`indexOfx = ${indexOfX}`);
-    console.log(X.lastIndexOf("#"));
     // lux 값이 없을 때 '#'이 존재하면 i 입력(lux는 #가 있는 i의 최솟값)
     if (lux === undefined && indexOfX > -1) lux = i;
     // rdx의 값이 없거나 '#'이 있는 위치가 더 크다면 i 입력(rdx는 #가 있는 i 값의 최댓값)
