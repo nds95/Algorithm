@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/118666
 
-const survey = ["TR", "RT", "TR"];
+let survey = ["TR", "RT", "TR"];
 const choices = [7, 1, 3];
 
 const solution = (survey, choices) => {
