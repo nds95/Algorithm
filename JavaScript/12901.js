@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12901
 
-const a = 5;
+let a = 5;
 const b = 24;
 
 function solution(a, b) {
