@@ -10,7 +10,6 @@ const solution = (n, m, section) => {
   for (let i = 0, len = section.length; i < len; i++) {
     // 이미 페인트칠 한 구역이면 continue;
     if (painedSection >= section[i]) continue;
-    console.log(painedSection);
 
     const paintingSection = section[i] + m - 1;
     painedSection = paintingSection;
