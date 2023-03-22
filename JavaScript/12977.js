@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12977
 
-const nums = [1, 2, 7, 6, 4];
+const nums = [1, 1, 1, 1];
 
 function solution(nums) {
   let answer = 0;
@@ -43,7 +43,6 @@ function solution(nums) {
     if (getIsPrimeNumber(value)) answer++;
   });
 
-  console.log("------------------------");
   return answer;
 }
 console.log(solution(nums));

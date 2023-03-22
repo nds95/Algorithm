@@ -11,7 +11,6 @@ function solution(arr, num) {
   function getShiftTargetStringList(list) {
     return (list = list.map((value) => {
       const nIndexString = value[num];
-      console.log(value, "dave");
       let v = value.split("");
       v.splice(num, 1);
       v.reverse();
