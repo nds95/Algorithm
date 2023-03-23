@@ -6,11 +6,9 @@ const solution = (s) => {
   let reg = new RegExp(/\s+/, "g");
   s = s.toLowerCase().split(" ");
 
-  console.log(s);
   for (let i = 0, len = s.length; i < len; i++) {
     if (!s[i]) continue;
     let str = s[i].split("");
-    console.log(str);
     str.splice(0, 1, str[0].toUpperCase());
     s[i] = str.join("");
   }
