@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12977
 
-const nums = [1, 1, 1, 1];
+const nums = [1, 2, 3, 4];
 
 function solution(nums) {
   let answer = 0;
@@ -11,7 +11,7 @@ function solution(nums) {
     if (num === 1) return arr.map((v) => [v]);
 
     arr.forEach((fixed, index, origin) => {
-      const rest = [...origin.slice(0, index), ...origin.slice(index + 1)];
+      const rest = origin.slice(index + 1);
       const permutations = getPermutations(rest, num - 1);
       const attached = permutations.map((v) => [fixed, ...v]);
 
@@ -23,25 +23,22 @@ function solution(nums) {
 
   const getIsPrimeNumber = (num) => {
     if (num % 2 === 0) return false;
-    for (let i = 3, len = num; i < len; i++) {
+    for (let i = 3, len = Math.sqrt(num); i <= len; i += 2) {
       if (num % i === 0) return false;
     }
     return true;
   };
 
   const permutationsArr = getPermutations(nums, 3);
+  console.log(permutationsArr);
   const arr = [];
   for (let i = 0, len = permutationsArr.length; i < len; i++) {
     let sum = 0;
     permutationsArr[i].forEach((value) => {
       sum += value;
     });
-    if (!arr.includes(sum)) arr.push(sum);
+    if (getIsPrimeNumber(sum)) answer++;
   }
-
-  arr.forEach((value) => {
-    if (getIsPrimeNumber(value)) answer++;
-  });
 
   return answer;
 }
