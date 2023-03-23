@@ -2,10 +2,8 @@
 const s = "1 2 3 4";
 
 const solution = (s) => {
-  let answer = "";
   let splitedStr = s.split(" ");
   return `${Math.min(...splitedStr)} ${Math.max(...splitedStr)}`;
-  return answer;
 };
 
 console.log(solution(s));
