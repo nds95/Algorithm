@@ -6,7 +6,7 @@ public class Divisor {
   public static void main(String[] args){
     Divisor divisor = new Divisor();
     int[] arr = {5, 9, 7, 10};
-    int divisor1 = 5;
+    int divisor1 = 7;
     System.out.println(divisor.solution(arr, divisor1));
 
   }
