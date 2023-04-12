@@ -6,7 +6,7 @@ public class GetMiddleString {
   }
 
   public String solution(String s){
-    String answer = "";
+    String answer = "1";
     int sLen = s.length();
     String[] sArr = s.split("");
     if(sLen % 2 == 0){
